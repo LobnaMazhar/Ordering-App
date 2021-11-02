@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Ordering App</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="currency">%d EGP</string>
 </resources>
