@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="cvm"
+            type="lobna.capiter.orderingapp.viewmodel.CartViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.cart.CartActivity">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_padding_size_medium"
+            android:layout_marginTop="@dimen/margin_padding_size_medium"
+            android:layout_marginEnd="@dimen/margin_padding_size_medium"
+            android:layout_marginBottom="@dimen/margin_padding_size_medium"
+            android:background="@drawable/shape_white_border_black_corner_4"
+            android:hint="@string/order_name"
+            android:paddingStart="@dimen/margin_padding_size_medium"
+            android:paddingTop="@dimen/margin_padding_size_small"
+            android:paddingEnd="@dimen/margin_padding_size_medium"
+            android:paddingBottom="@dimen/margin_padding_size_small"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_medium"
+            android:visibility="@{cvm.isEmptyObservable() ? View.GONE : View.VISIBLE, default=gone}" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cart_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:visibility="@{cvm.isEmptyObservable() ? View.GONE : View.VISIBLE, default=gone}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@{cvm.isOrderDoneObservable() ? @string/order_confirmed : @string/empty_cart}"
+            android:textColor="#1C391D"
+            android:textSize="@dimen/text_size_title"
+            android:visibility="@{cvm.isEmptyObservable() ? View.VISIBLE : View.GONE, default=gone}" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_padding_size_medium"
+            android:layout_marginTop="@dimen/margin_padding_size_medium"
+            android:layout_marginEnd="@dimen/margin_padding_size_medium"
+            android:layout_marginBottom="@dimen/margin_padding_size_medium"
+            android:text="@{cvm.isEmptyObservable() ? @string/back_to_home : @string/confirm_order}"
+            android:textAllCaps="false"
+            android:onClick="@{cvm.isEmptyObservable() ? cvm::backToHome : cvm::makeOrder}"
+            app:backgroundTint="@color/blue" />
+
+    </LinearLayout>
+</layout>

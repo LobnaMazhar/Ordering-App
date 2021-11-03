@@ -11,8 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OrderingApp">
+        <activity android:name=".ui.cart.CartActivity"
+            android:label="@string/shopping_cart"/>
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.home.MainActivity"
+            android:label="@string/products"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

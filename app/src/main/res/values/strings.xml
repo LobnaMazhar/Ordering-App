@@ -2,4 +2,11 @@
     <string name="app_name">Ordering App</string>
     <string name="add_to_cart">Add to cart</string>
     <string name="currency">%d EGP</string>
+    <string name="order_name">Order Name</string>
+    <string name="confirm_order">Confirm Order</string>
+    <string name="back_to_home">Back to Home</string>
+    <string name="order_confirmed">Order Confirmed</string>
+    <string name="empty_cart">No items added to cart</string>
+    <string name="shopping_cart">Shopping Cart</string>
+    <string name="products">Products</string>
 </resources>
