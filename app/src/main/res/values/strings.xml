@@ -1,12 +1,21 @@
 <resources>
-    <string name="app_name">Ordering App</string>
+    <string name="app_name" translatable="false">Ordering App</string>
+    <string name="products">Products</string>
     <string name="add_to_cart">Add to cart</string>
     <string name="currency">%d EGP</string>
+    <string name="shopping_cart">Shopping Cart</string>
     <string name="order_name">Order Name</string>
     <string name="confirm_order">Confirm Order</string>
     <string name="back_to_home">Back to Home</string>
     <string name="order_confirmed">Order Confirmed</string>
     <string name="empty_cart">No items added to cart</string>
-    <string name="shopping_cart">Shopping Cart</string>
-    <string name="products">Products</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>

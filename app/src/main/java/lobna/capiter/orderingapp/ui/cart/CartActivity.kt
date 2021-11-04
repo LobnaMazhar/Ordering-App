@@ -6,9 +6,11 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import lobna.capiter.orderingapp.databinding.ActivityCartBinding
 import lobna.capiter.orderingapp.model.CartModel
+import lobna.capiter.orderingapp.preferences.ConfigurationFile
+import lobna.capiter.orderingapp.ui.BaseActivity
 import lobna.capiter.orderingapp.viewmodel.CartViewModel
 
-class CartActivity : AppCompatActivity() {
+class CartActivity : BaseActivity() {
 
     private lateinit var activityCartBinding: ActivityCartBinding
     private val cartViewModel by viewModels<CartViewModel>()

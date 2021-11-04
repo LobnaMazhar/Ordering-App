@@ -13,10 +13,12 @@ import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.launch
 import lobna.capiter.orderingapp.R
 import lobna.capiter.orderingapp.databinding.ActivityMainBinding
+import lobna.capiter.orderingapp.preferences.ConfigurationFile
+import lobna.capiter.orderingapp.ui.BaseActivity
 import lobna.capiter.orderingapp.ui.cart.CartActivity
 import lobna.capiter.orderingapp.viewmodel.MainViewModel
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
     private val mainViewModel by viewModels<MainViewModel>()
 
